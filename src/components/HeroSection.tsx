@@ -1,8 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const [currentWord, setCurrentWord] = useState(0);
+  const [showStrike, setShowStrike] = useState(false);
+  const words = ["Transform", "Change"];
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentWord === 0) {
+        // Currently showing "Transform", switch to "Change"
+        setCurrentWord(1);
+        // Show strike after a delay
+        setTimeout(() => setShowStrike(true), 300);
+      } else {
+        // Currently showing "Change", hide strike first, then switch to "Transform"
+        setShowStrike(false);
+        setTimeout(() => setCurrentWord(0), 200);
+      }
+    }, 2500);
+    
+    return () => clearInterval(interval);
+  }, [currentWord]);
   
   return (
     <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
@@ -12,7 +34,48 @@ const HeroSection = () => {
           <div className="order-1 lg:order-1 text-center lg:text-left mt-8 lg:mt-0">
             <h1 className="text-5xl lg:text-6xl font-medium text-charcoal mb-6 leading-tight animate-on-scroll">
               Find Your Balance,<br />
-              <span className="text-accent">Transform</span> Your Life
+              <span className="relative inline-flex w-[200px] lg:w-[280px] justify-center">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentWord}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ 
+                      duration: 0.3
+                    }}
+                    className={`inline-block ${currentWord === 0 ? 'text-[#d38d50]' : 'text-accent font-light'}`}
+                  >
+                    {words[currentWord]}
+                  </motion.span>
+                </AnimatePresence>
+                
+                {/* Strikethrough line animation - controlled by separate state */}
+                <AnimatePresence>
+                  {showStrike && (
+                    <motion.div
+                      className="absolute top-1/2 -translate-y-1/2 w-full flex justify-center"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ 
+                        duration: 0.2
+                      }}
+                    >
+                      <motion.span
+                        className="h-1 bg-accent"
+                        initial={{ width: 0 }}
+                        animate={{ width: currentWord === 1 ? "180px" : "0px" }}
+                        exit={{ width: 0 }}
+                        transition={{ 
+                          duration: 0.3,
+                          ease: "easeInOut"
+                        }}
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </span> Your Life
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed animate-on-scroll" style={{animationDelay: '0.2s'}}>
               We curate transformative experiences that harmonize body, mind, and spirit. 

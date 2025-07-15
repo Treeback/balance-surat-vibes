@@ -228,4 +228,65 @@ All colors MUST be HSL.
   .animate-logo svg path:nth-child(even) {
     animation-delay: 0.3s;
   }
+  
+  /* Text change animation */
+  @keyframes word-switch {
+    0%, 45% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50%, 95% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes line-through {
+    0%, 40% {
+      width: 0;
+      left: 0;
+    }
+    45%, 55% {
+      width: 100%;
+      left: 0;
+    }
+    60%, 100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  
+  .word-switcher {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .word-switcher .word {
+    display: inline-block;
+  }
+  
+  .word-switcher .word-1 {
+    animation: word-switch 6s ease-in-out infinite;
+  }
+  
+  .word-switcher .word-2 {
+    position: absolute;
+    left: 0;
+    animation: word-switch 6s ease-in-out infinite reverse;
+  }
+  
+  .word-switcher::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform: translateY(-50%);
+    animation: line-through 6s ease-in-out infinite;
+  }
 }
