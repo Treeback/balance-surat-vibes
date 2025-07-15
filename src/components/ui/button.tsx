@@ -22,7 +22,8 @@ const buttonVariants = cva(
         earth: "bg-earth text-primary-foreground hover:bg-earth/90 shadow-md hover:shadow-lg transform hover:scale-105",
         zen: "bg-transparent border-2 border-sage text-sage hover:bg-sage hover:text-primary-foreground transition-all duration-300 shadow-soft",
         meditation: "bg-gradient-to-r from-sage to-earth text-primary-foreground hover:from-sage/90 hover:to-earth/90 shadow-lg hover:shadow-xl transform hover:scale-105",
-        organic: "bg-muted text-foreground hover:bg-sage/20 hover:text-sage border border-sage/30 rounded-full transition-all duration-300",
+        artistic: "bg-terracotta text-primary-foreground hover:bg-terracotta/90 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300",
+        commune: "bg-gradient-to-r from-terracotta to-sage text-primary-foreground hover:from-terracotta/90 hover:to-sage/90 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

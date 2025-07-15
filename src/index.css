@@ -38,19 +38,23 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Custom Balance Commune colors */
-    --sage: 120 25% 50%;
-    --sage-light: 120 25% 70%;
-    --sage-dark: 120 25% 30%;
-    --earth: 30 25% 45%;
-    --earth-light: 30 25% 65%;
-    --warm-white: 35 25% 97%;
-    --soft-gray: 25 5% 75%;
+    /* Custom Balance Commune colors - Inspired by artistic, warm aesthetic */
+    --sage: 120 20% 45%;
+    --sage-light: 120 25% 65%;
+    --sage-dark: 120 30% 25%;
+    --earth: 25 35% 40%;
+    --earth-light: 30 40% 60%;
+    --terracotta: 15 45% 50%;
+    --terracotta-light: 20 50% 70%;
+    --cream: 40 30% 92%;
+    --warm-beige: 35 25% 85%;
+    --charcoal: 220 15% 20%;
 
-    /* Gradients */
+    /* Gradients - Artistic warm palette */
     --gradient-primary: linear-gradient(135deg, hsl(var(--sage)) 0%, hsl(var(--earth)) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(var(--warm-white)) 0%, hsl(var(--muted)) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(var(--sage-light)) 0%, hsl(var(--accent)) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(var(--cream)) 0%, hsl(var(--warm-beige)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--terracotta-light)) 0%, hsl(var(--sage-light)) 100%);
+    --gradient-artistic: linear-gradient(145deg, hsl(var(--terracotta)) 0%, hsl(var(--earth)) 50%, hsl(var(--sage)) 100%);
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -8px hsl(var(--sage) / 0.3);

@@ -62,7 +62,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom Balance Commune colors
+				// Custom Balance Commune colors - Artistic warm palette
 				sage: {
 					DEFAULT: 'hsl(var(--sage))',
 					light: 'hsl(var(--sage-light))',
@@ -72,8 +72,13 @@ export default {
 					DEFAULT: 'hsl(var(--earth))',
 					light: 'hsl(var(--earth-light))'
 				},
-				'warm-white': 'hsl(var(--warm-white))',
-				'soft-gray': 'hsl(var(--soft-gray))'
+				terracotta: {
+					DEFAULT: 'hsl(var(--terracotta))',
+					light: 'hsl(var(--terracotta-light))'
+				},
+				cream: 'hsl(var(--cream))',
+				'warm-beige': 'hsl(var(--warm-beige))',
+				charcoal: 'hsl(var(--charcoal))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
