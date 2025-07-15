@@ -1,0 +1,22 @@
+{
+  "name": "The Balance Commune",
+  "short_name": "Balance Commune",
+  "description": "Transformative wellness experiences in Surat",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#D3A2C0",
+  "background_color": "#FAF9F7",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
