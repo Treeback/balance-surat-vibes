@@ -1,73 +1,91 @@
-# Welcome to your Lovable project
+# The Balance Commune
 
-## Project info
+A transformative wellness experiences platform connecting people with mindful movement, creative expression, and community in Surat.
 
-**URL**: https://lovable.dev/projects/20e751cf-ac1d-40bb-835b-825070d9595f
+## Getting Started
 
-## How can I edit this code?
+### Prerequisites
 
-There are several ways of editing your application.
+- Node.js & npm - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-**Use Lovable**
+### Installation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/20e751cf-ac1d-40bb-835b-825070d9595f) and start prompting.
+```bash
+# Clone the repository
+git clone <repository-url>
 
-Changes made via Lovable will be committed automatically to this repo.
+# Navigate to project directory
+cd balance-surat-vibes
 
-**Use your preferred IDE**
+# Install dependencies
+npm install
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Development
 
-**Use GitHub Codespaces**
+```bash
+# Run development server
+npm run dev
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Build for production
+npm run build
 
-## What technologies are used for this project?
+# Preview production build
+npm run preview
+```
+
+## Features
+
+- **Experience Catalog**: Browse curated wellness experiences including slackline workshops, human library sessions, forest bathing, and feminine circles
+- **Animated Hero Section**: Dynamic text animation that switches between "Transform" and "Change" with a strikethrough effect
+- **Scroll Animations**: Smooth scroll-triggered animations throughout the site
+- **Responsive Design**: Fully responsive layout optimized for all devices
+- **Experience Details**: Dedicated pages for each experience with comprehensive information
+- **Founder Story**: Personal narrative from founder Arushi Sharma
+
+## Technologies
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite** - Fast build tool and development server
+- **TypeScript** - Type-safe JavaScript
+- **React** - Component-based UI library
+- **React Router** - Client-side routing
+- **Framer Motion** - Animation library
+- **shadcn/ui** - Modern component library
+- **Tailwind CSS** - Utility-first CSS framework
 
-## How can I deploy this project?
+## Project Structure
 
-Simply open [Lovable](https://lovable.dev/projects/20e751cf-ac1d-40bb-835b-825070d9595f) and click on Share -> Publish.
+```
+src/
+├── components/          # React components
+│   ├── HeroSection.tsx    # Animated hero with text effects
+│   ├── Navigation.tsx     # Site header and navigation
+│   ├── ExperiencesSection.tsx  # Experience cards grid
+│   ├── AboutSection.tsx   # About and founder story
+│   └── ContactSection.tsx # Footer with contact info
+├── pages/              # Page components
+│   └── ExperienceDetail.tsx  # Individual experience pages
+├── hooks/              # Custom React hooks
+│   └── use-scroll-animation.tsx  # Scroll animation hook
+└── App.tsx             # Main app component with routing
+```
 
-## Can I connect a custom domain to my Lovable project?
+## Design System
 
-Yes, you can!
+- **Colors**: Grayscale palette with purple accents (#9B7EC8)
+- **Typography**: Roboto font family
+- **Animations**: Framer Motion for smooth transitions
+- **Components**: shadcn/ui for consistent UI elements
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Contact
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Website: [thebalancecommune.com](https://thebalancecommune.com)
+- Instagram: [@thebalancecommune](https://instagram.com/thebalancecommune)
+- Email: hello@balancecommune.com
