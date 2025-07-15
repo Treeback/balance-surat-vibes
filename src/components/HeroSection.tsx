@@ -15,28 +15,28 @@ const HeroSection = () => {
         {/* Left side - Content */}
         <div className="text-center lg:text-left animate-fade-in">
           <h1 className="text-5xl lg:text-6xl font-serif font-bold text-charcoal mb-6 leading-tight">
-            The
-            <span className="text-terracotta block">Balance</span>
-            <span className="text-sage">Commune</span>
+            Find Your
+            <span className="text-terracotta block">Inner</span>
+            <span className="text-sage">Balance</span>
           </h1>
           
           <p className="text-xl text-earth mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-            A sanctuary for <span className="text-sage font-medium">mindful experiences</span> in Surat. 
-            Discover balance through art, movement, and introspection. Where every experience is a journey inward.
+            Discover fresh sources of <span className="text-sage font-medium">joy and mindfulness</span> in Surat. 
+            From movement to meditation, art to introspection - every experience is crafted to reconnect you with yourself.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button variant="commune" size="lg" className="font-medium">
-              Explore Experiences
+              Discover Experiences
             </Button>
             <Button variant="zen" size="lg" className="font-medium">
-              Join Our Community
+              Join the Journey
             </Button>
           </div>
           
           <div className="mt-8 pt-6 border-t border-sage/20">
             <p className="text-sm text-earth/80 mb-2">Coming Soon</p>
-            <p className="text-sage font-medium">Slacklining • Art Therapy • Meditation</p>
+            <p className="text-sage font-medium">The Slackline Journey • Mindful Canvas • Inner Stillness</p>
           </div>
         </div>
         
