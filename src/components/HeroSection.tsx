@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import AnimatedLogoWrapper from "./AnimatedLogoWrapper";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -124,10 +125,8 @@ const HeroSection = () => {
           
           {/* Right side - Logo */}
           <div className="order-2 lg:order-2 flex items-center justify-center animate-on-scroll-scale" style={{animationDelay: '0.6s'}}>
-            <img 
-              src="/logo.svg" 
-              alt="The Balance Commune Logo" 
-              className="w-full max-w-lg lg:max-w-2xl h-auto animate-logo"
+            <AnimatedLogoWrapper 
+              className="w-full max-w-xl lg:max-w-3xl h-auto"
             />
           </div>
         </div>
